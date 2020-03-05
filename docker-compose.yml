@@ -1,0 +1,13 @@
+version: '3'
+services:
+  aem-disp24:
+    build:
+      context: .
+    image: aem-disp24
+    container_name: aem-disp24
+    ports:
+      - "8080:80"
+    volumes:
+      - ./current_dispatcher_configs/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./current_dispatcher_configs/dispatcher.any:/usr/local/apache2/conf/dispatcher.any
+      - ./current_dispatcher_configs/cache:/usr/local/apache2/htdocs
