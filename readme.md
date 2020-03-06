@@ -1,4 +1,5 @@
-# Local AEM Dispatcher deployment. Apache 2.4, dispatcher module 4.3.3 
+# Local AEM Dispatcher deployment. 
+# Apache 2.4, dispatcher module 4.3.3 
 --------------------------------------------------------------------------------
 
 In order to deploy an AEM dispacher via docker execute the following steps
@@ -14,10 +15,14 @@ In order to deploy an AEM dispacher via docker execute the following steps
 
 FROM DOCKERFILE
    build container
+    ```
     $ docker build -t aem-disp24 .
+    ```
 
    run container
+    ```
     $ docker run -dit --name aem-disp24 -p 8080:80 aem-disp24
+    ```
 
 FROM DOCKER COMPOSE
     $ docker-compose up --build -d (if rebuild required)
