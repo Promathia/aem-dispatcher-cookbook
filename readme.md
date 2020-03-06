@@ -14,35 +14,45 @@ In order to deploy an AEM dispacher via docker execute the following steps
 --------------------------------------------------------------------------------
 
 FROM DOCKERFILE  
-   build container  
-    ```
-    $ docker build -t aem-disp24 .
-    ```
+to build container  
+```
+$ docker build -t aem-disp24 .
+```
   
-   run container  
-    ```
-    $ docker run -dit --name aem-disp24 -p 8080:80 aem-disp24
-    ```
+to run a container  
+```
+$ docker run -dit --name aem-disp24 -p 8080:80 aem-disp24
+```
   
 FROM DOCKER COMPOSE  
-    $ docker-compose up --build -d (if rebuild required)
-
-or to run compose 
-$ docker-compose up -d (to start)
-
-to remove
+```
+$ docker-compose up --build -d (if rebuild required)
+```
+  
+to run without rebuild  
+```
+$ docker-compose up -d
+```
+  
+to remove the container  
+```
 $ docker-compose down
-
-list containers
-$ docker container ls //// container ps
-
-connect terminal
-$ docker exec -it aem-disp24 /bin/bash
-
-copy file from container
-$ docker cp aem-disp24:/usr/local/apache2/conf/httpd.conf .
-
-remove container
 $ docker rm aem-disp24 -f
+```
 
+to list containers  
+```
+$ docker container ls  
+$ container ps
+```
+  
+to connect a terminal  
+```
+$ docker exec -it aem-disp24 /bin/bash
+```
+  
+to copy file from container  
+```
+$ docker cp aem-disp24:/usr/local/apache2/conf/httpd.conf .
+```
 
