@@ -6,7 +6,7 @@ In order to deploy an AEM dispacher via docker execute the following steps
 
 'aem_dispatcher' folder contains default config files  
 
-0) sunc current repository
+0) sync current repository
 1) create in the working  folder another one and name it 'current_dispatcher_configs'
 2) create a folder 'cache' inside it (it will be matched with '...htdocs' one in container)
 3) copy and configure, if required, 'dispatcher.any' and 'httpd.conf' files from 'aem_dispatcher' to 'current_dispatcher_configs'
